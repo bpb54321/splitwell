@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: splitwise-api-ingress
+spec:
+  rules:
+    - host: splitwell.com
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: splitwise-api-service
+                port:
+                  number: 80

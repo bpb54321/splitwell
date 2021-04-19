@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: splitwise-api-deployment
+  labels:
+    app: splitwise-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: splitwise-api
+  template:
+    metadata:
+      labels:
+        app: splitwise-api
+    spec:
+      containers:
+        - name: splitwise-api
+          image: bpb54321/splitwise-api:v1.8
+          ports:
+            - containerPort: 80

@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: splitwise-api
-          image: bpb54321/splitwise-api:v1.8
+          image: bpb54321/splitwise-api:latest
           ports:
             - containerPort: 80

@@ -42,7 +42,7 @@ namespace SplitwiseApi
 
             app.Use(next => context =>
             {
-                Console.WriteLine("In the first middleware");
+                Console.WriteLine("First middleware in version 1.9");
                 return next(context);
             });
             
